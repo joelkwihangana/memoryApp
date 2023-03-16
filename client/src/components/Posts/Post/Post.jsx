@@ -13,7 +13,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import MoreHorisIcon from "@material-ui/icons/MoreHoriz";
 import moment from "moment/moment";
 
-const Post = ({ post }) => {
+const Post = ({ post, setCurrentId }) => {
   const classes = usePostStyles();
   return (
     <Card className={classes.card}>
@@ -29,7 +29,13 @@ const Post = ({ post }) => {
         </Typography>
       </div>
       <div className={classes.overlay2}>
-        <Button style={{ color: "#fff" }} size="small" onClick={() => {}}>
+        <Button
+          style={{ color: "#fff" }}
+          size="small"
+          onClick={() => {
+            setCurrentId(post._id);
+          }}
+        >
           <MoreHorisIcon fontSize="default" />
         </Button>
       </div>
@@ -38,8 +44,16 @@ const Post = ({ post }) => {
           {post.tags.map((tag) => `# ${tag} `)}
         </Typography>
       </div>
+
       <CardContent>
-        {" "}
+        <Typography
+          className={classes.cardTitle}
+          gutterBottom
+          variant="h6"
+          component="h2"
+        >
+          {post.title}
+        </Typography>
         <Typography className={classes.title} variant="h6" gutterBottom>
           {post.message}
         </Typography>
