@@ -51,6 +51,10 @@ export default makeStyles({
     color: "blue",
     fontWeight: "600",
   },
+  cardBody: {
+    fontSize: "14px",
+    padding: "0 16px",
+  },
   cardActions: {
     padding: "0 16px 8px 16px",
     display: "flex",
