@@ -42,8 +42,8 @@ Create a .env file in the server directory and set the following environment var
 makefile
 Copy code
 PORT=5000
-MONGO_URI=<your-mongodb-uri>
-JWT_SECRET=<your-jwt-secret>
+#MONGO_URI=<your-mongodb-uri>
+#JWT_SECRET=<your-jwt-secret>
 Start the server:
 
 sql
