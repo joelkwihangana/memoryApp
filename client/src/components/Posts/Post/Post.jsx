@@ -69,6 +69,7 @@ const Post = ({ post, setCurrentId }) => {
           onClick={() => dispatch(likePost(post._id))}
         >
           <ThumbUpAltIcon fontSize="small" />
+          &nbsp;
           {post.liceCount}
         </Button>
         <Button

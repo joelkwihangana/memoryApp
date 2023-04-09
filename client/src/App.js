@@ -27,6 +27,7 @@ function App() {
       <Grow in>
         <Container>
           <Grid
+            className={classes.gridVontainer}
             container
             justifyContent="space-between"
             alignItems="stretch"
